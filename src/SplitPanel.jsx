@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import _ from "lodash";
 
@@ -23,7 +24,7 @@ export default class SplitPanel extends React.Component {
      *
      * Default: horizontal
      */
-    direction: React.PropTypes.oneOf(["horizontal", "vertical"]),
+    direction: PropTypes.oneOf(["horizontal", "vertical"]),
 
     /**
      * The minimum size (in pixels) of a subpanel. The divider will stop
@@ -31,7 +32,7 @@ export default class SplitPanel extends React.Component {
      *
      * Default: 25
      */
-    minPanelSize: React.PropTypes.number,
+    minPanelSize: PropTypes.number,
 
     /**
      * Called whenever a subpanel is resized.
@@ -39,20 +40,20 @@ export default class SplitPanel extends React.Component {
      * You should update `weights` in response to this event unless you're
      * using `defaultWeights`.
      */
-    onWeightChange: React.PropTypes.func,
+    onWeightChange: PropTypes.func,
 
     /**
      * The weights of each subpanel. If you're using this property you must
      * manually update this prop in response to `onWeightChange` otherwise
      * the subpanels will not resize.
      */
-    weights: React.PropTypes.arrayOf(React.PropTypes.number),
+    weights: PropTypes.arrayOf(PropTypes.number),
 
     /**
      * The default weights to use when you are not managing the weights
      * manually via the `weights` and `onWeightChange` props.
      */
-    defaultWeights: React.PropTypes.arrayOf(React.PropTypes.number),
+    defaultWeights: PropTypes.arrayOf(PropTypes.number),
 
     /**
      * The resize step size in pixels.
@@ -62,7 +63,7 @@ export default class SplitPanel extends React.Component {
      *
      * Default: 1
      */
-    stepSize: React.PropTypes.number,
+    stepSize: PropTypes.number,
 
     /**
      * Bool that controls adjustment on mouse up functionality
@@ -72,7 +73,7 @@ export default class SplitPanel extends React.Component {
      *
      * Default: true
      */
-    doAdjustmentOnMouseUp: React.PropTypes.bool,
+    doAdjustmentOnMouseUp: PropTypes.bool,
 
     /**
      * Bool that controls exit on violation during mouse move functionality
@@ -82,7 +83,7 @@ export default class SplitPanel extends React.Component {
      *
      * Default: true
      */
-    exitMouseMoveOnViolation: React.PropTypes.bool,
+    exitMouseMoveOnViolation: PropTypes.bool,
 
     /**
      * Bool that controls adjustment on componentWillReceiveProps
@@ -91,7 +92,7 @@ export default class SplitPanel extends React.Component {
      *
      * Default: true
      */
-    adjustOnReceiveProps: React.PropTypes.bool,
+    adjustOnReceiveProps: PropTypes.bool,
 
     /**
      * Bool that controls adjustment on mouse move functionality
@@ -103,7 +104,7 @@ export default class SplitPanel extends React.Component {
      *
      * Default: false
      */
-    doAdjustmentOnMouseMove: React.PropTypes.bool
+    doAdjustmentOnMouseMove: PropTypes.bool
   };
 
   static defaultProps = {

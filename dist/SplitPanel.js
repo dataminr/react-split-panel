@@ -10,6 +10,10 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require("prop-types");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require("classnames");
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -608,7 +612,7 @@ SplitPanel.propTypes = {
    *
    * Default: horizontal
    */
-  direction: _react2.default.PropTypes.oneOf(["horizontal", "vertical"]),
+  direction: _propTypes2.default.oneOf(["horizontal", "vertical"]),
 
   /**
    * The minimum size (in pixels) of a subpanel. The divider will stop
@@ -616,7 +620,7 @@ SplitPanel.propTypes = {
    *
    * Default: 25
    */
-  minPanelSize: _react2.default.PropTypes.number,
+  minPanelSize: _propTypes2.default.number,
 
   /**
    * Called whenever a subpanel is resized.
@@ -624,20 +628,20 @@ SplitPanel.propTypes = {
    * You should update `weights` in response to this event unless you're
    * using `defaultWeights`.
    */
-  onWeightChange: _react2.default.PropTypes.func,
+  onWeightChange: _propTypes2.default.func,
 
   /**
    * The weights of each subpanel. If you're using this property you must
    * manually update this prop in response to `onWeightChange` otherwise
    * the subpanels will not resize.
    */
-  weights: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.number),
+  weights: _propTypes2.default.arrayOf(_propTypes2.default.number),
 
   /**
    * The default weights to use when you are not managing the weights
    * manually via the `weights` and `onWeightChange` props.
    */
-  defaultWeights: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.number),
+  defaultWeights: _propTypes2.default.arrayOf(_propTypes2.default.number),
 
   /**
    * The resize step size in pixels.
@@ -647,7 +651,7 @@ SplitPanel.propTypes = {
    *
    * Default: 1
    */
-  stepSize: _react2.default.PropTypes.number,
+  stepSize: _propTypes2.default.number,
 
   /**
    * Bool that controls adjustment on mouse up functionality
@@ -657,7 +661,7 @@ SplitPanel.propTypes = {
    *
    * Default: true
    */
-  doAdjustmentOnMouseUp: _react2.default.PropTypes.bool,
+  doAdjustmentOnMouseUp: _propTypes2.default.bool,
 
   /**
    * Bool that controls exit on violation during mouse move functionality
@@ -667,7 +671,7 @@ SplitPanel.propTypes = {
    *
    * Default: true
    */
-  exitMouseMoveOnViolation: _react2.default.PropTypes.bool,
+  exitMouseMoveOnViolation: _propTypes2.default.bool,
 
   /**
    * Bool that controls adjustment on componentWillReceiveProps
@@ -676,7 +680,7 @@ SplitPanel.propTypes = {
    *
    * Default: true
    */
-  adjustOnReceiveProps: _react2.default.PropTypes.bool,
+  adjustOnReceiveProps: _propTypes2.default.bool,
 
   /**
    * Bool that controls adjustment on mouse move functionality
@@ -688,7 +692,7 @@ SplitPanel.propTypes = {
    *
    * Default: false
    */
-  doAdjustmentOnMouseMove: _react2.default.PropTypes.bool
+  doAdjustmentOnMouseMove: _propTypes2.default.bool
 };
 SplitPanel.defaultProps = {
   direction: "horizontal",
